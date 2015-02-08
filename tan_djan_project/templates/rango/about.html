@@ -1,12 +1,8 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
 {% load staticfiles %}
 
-<html>
-    <body>
+{% block body_block %}
         This tutorial has been put together by <strong>{{ boldmessage }}</strong><br />
-        <a href="/rango/">Index</a><br />
         <img src="{% static "images/me.jpg" %}" alt="Picture of me" />
-    </body>
-
-</html>
+{% endblock %}
