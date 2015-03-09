@@ -304,7 +304,7 @@ def register_profile(request):
 
 
 def profile(request):
-    user = request.user
+    user=request.user
     user_profile = UserProfile.objects.get(user=user)
     if request.method == 'POST':
         if 'username' in request.POST and request.POST['username'] != '' :
@@ -322,6 +322,4 @@ def profile(request):
         
         context_dict = {'user':user, 'user_profile':user_profile}
         return render(request, 'rango/profile.html', context_dict)
-    
-        
     
