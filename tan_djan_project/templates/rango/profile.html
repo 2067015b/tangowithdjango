@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block body_block %}
+<form role="form"  method="post" action=".">
+                {% csrf_token %}
+
+<h2 class="form-signin-heading">{{ user.username }}</h2>
+
+<div class="form-group" >
+ <p class="required"> <label for="id_username">Username:</label>
+     <input class="form-control"  id="id_username" maxlength="30" name="username" type="text"  placeholder="{{ user.username }}"/></p>
+</div>
+ <div class="form-group">
+    <p class="required"><label for="id_email">E-mail:</label>
+        <input class="form-control" id="id_email" name="email" type="email" placeholder="{{ user.email }}" /></p>
+ </div>
+<div class="form-group">
+    <p class="required"><label for="website">Website:</label>
+        <input class="form-control" id="id_website" name="website" type="text" placeholder="{{ user_profile.website }}" /></p>
+</div>
+<div class="form-group">
+    
+    <p><label for="picture">Profile picture:</label><img src='media/profile_images/{{ user_profile.picture.name }}' >
+ <input  id="id_picture" name="picture" type="file" placeholder="Enter new picture" /></p>
+</div>
+
+<button type="submit" class="btn btn-default">Submit</button>
+
+        </form>
+{% endblock %}

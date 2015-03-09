@@ -8,6 +8,7 @@ def run_query(search_terms):
     root_url = 'https://api.datamarket.azure.com/Bing/Search/'
     source = 'Web'
 
+
     # Specify how many results we wish to be returned per page.
     # Offset specifies where in the results list to start from.
     # With results_per_page = 10 and offset = 11, this would start from page 2.
